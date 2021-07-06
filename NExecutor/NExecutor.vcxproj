@@ -86,6 +86,7 @@
   <ItemGroup>
     <ClInclude Include="ExecutorConsole.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="ScriptContext.h" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +97,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ScriptContext.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NExecutor.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
