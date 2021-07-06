@@ -46,8 +46,14 @@ static DWORD __stdcall onDllAttached(LPVOID)
         return EXIT_FAILURE;
     }
 
+#ifdef _DEBUG
+    executorConsole.WriteFormat(ExecutorConsole::Output, "ScriptContext: 0x%p\n", scriptContextPointer);
+#endif
+
     ScriptContext scriptContext(scriptContextPointer);
     executorConsole.StartExecutor(scriptContext);
+
+    return EXIT_SUCCESS;
 }
 
 BOOL __stdcall DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
